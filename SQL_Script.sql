@@ -1,39 +1,44 @@
 CREATE TABLE Authors (
-    author_id INT PRIMARY KEY,
-    author_name VARCHAR(255) NOT NULL,
-    birth_date DATE
+    authorID int PRIMARY KEY,
+    authorName VARCHAR(100) NOT NULL,
+    birthDate DATE
 );
-
 CREATE TABLE Books (
-    book_id INT PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    author_id INT,
-    genre VARCHAR(100),
-    price FLOAT,
-    stock_quantity INT,
-    FOREIGN KEY (author_id) REFERENCES Authors(author_id)
+    bookID INT PRIMARY KEY,
+    bookTitle VARCHAR(255) NOT NULL,
+    genre VARCHAR(50),
+    authorID INT REFERENCES Authors(authorID),
+    inStock INT,
+    price DECIMAL(10, 2),
+    publicationYear INT
 );
 
 CREATE TABLE Customers (
-    customer_id INT PRIMARY KEY,
-    customer_name VARCHAR(255) NOT NULL,
-    email VARCHAR(255),
-    phone_number VARCHAR(20)
+    customerID  INT PRIMARY KEY,
+    firstName VARCHAR(60),
+    lastName VARCHAR(60),
+    email VARCHAR(100),                                                 
+    customerAddress VARCHAR(250),
+    phoneNumber VARCHAR(20)                                              
 );
 
 CREATE TABLE Orders (
-    order_id INT PRIMARY KEY,
-    customer_id INT,
-    order_date DATE,
-    total_price FLOAT,
-    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+    orderID INT PRIMARY KEY,
+    customerID INT REFERENCES Customers(CustomerID),
+    orderDate DATE,
+    total DECIMAL(10, 2),
+    status VARCHAR(30)
 );
 
 CREATE TABLE OrderDetails (
-    order_id INT,
-    book_id INT,
+    orderDetailID INT PRIMARY KEY,
+    orderID INT REFERENCES Orders(orderID),
+    bookID INT REFERENCES Books(bookID),
     quantity INT,
-    PRIMARY KEY (order_id, book_id),
-    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
-    FOREIGN KEY (book_id) REFERENCES Books(book_id)
+    total DECIMAL(10, 2)
 );
+
+
+
+
+
