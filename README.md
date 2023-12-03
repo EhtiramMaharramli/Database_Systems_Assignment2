@@ -8,7 +8,7 @@
 Open your preferred IDE (IntelliJ IDEA, VisualStudio Code, Eclipse, etc.).
 Import the project.
 3. Add PostgreSQL JDBC Driver:
-Locate the postgresql-42.6.0.jar file in the src package
+Locate the postgresql-42.6.0.jar file 
 Add this JAR file to your project as a library or dependency.
 4. Create PostgreSQL Database:
 Set up a PostgreSQL database either inside a Docker container or using local pgAdmin.
