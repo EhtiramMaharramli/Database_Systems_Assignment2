@@ -26,13 +26,14 @@ public class Main {
                 customerOperations.performCustomerOperations();
 
 
-
                 OrderOperations orderOperations = new OrderOperations(con);
                 orderOperations.performOrderOperations();
 
                 OrderDetailsOperations orderDetailsOperations = new OrderDetailsOperations(con);
                 orderDetailsOperations.performOrderDetailsOperations();
 
+                MetaData metaData = new MetaData(con);
+                metaData.displayTableInfo();
 
 
 
