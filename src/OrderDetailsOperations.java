@@ -61,10 +61,10 @@ public class OrderDetailsOperations {
 
         for (int i = 0; i < numberOfRecords; i++) {
             int orderDetailID = i + 1;
-            int orderID = random.nextInt(5) + 1; // Assuming you have 5 orders
-            int bookID = random.nextInt(5) + 1;  // Assuming you have 5 books
-            int quantity = random.nextInt(10) + 1; // Random quantity between 1 and 10
-            BigDecimal total = new BigDecimal(random.nextInt(100) + 1); // Random total between 1 and 100
+            int orderID = random.nextInt(5) + 1;
+            int bookID = random.nextInt(5) + 1;
+            int quantity = random.nextInt(10) + 1;
+            BigDecimal total = new BigDecimal(random.nextInt(100) + 1);
 
             OrderDetails orderDetails = new OrderDetails(orderDetailID, orderID, bookID, quantity, total);
             insertOrderDetails(orderDetails);

@@ -16,8 +16,6 @@ public class AuthorOperations {
 
         updateAuthor(new Author(1, "Agatha Clarissa Christie", Date.valueOf("1890-09-15")));
 
-        displayAllAuthors();
-
         deleteAuthor(3);
 
         displayAllAuthors();
@@ -136,5 +134,4 @@ public class AuthorOperations {
         } catch (SQLException e) {
             System.out.println("Error executing SQL query: " + e.getMessage());
         }
-    }
-}
+    }}

@@ -58,8 +58,8 @@ public class OrderOperations {
         };
 
         for (int i = 1; i <= 5; i++) {
-            int orderID = i;
-            int customerID = random.nextInt(5) + 1;
+                int orderID = i;
+                int customerID = random.nextInt(5) + 1;
             Date orderDate = orderDates[i - 1];
             BigDecimal total = new BigDecimal(random.nextInt(100) + 50);
             String[] statuses = {"Processing", "Shipped", "Completed"};
