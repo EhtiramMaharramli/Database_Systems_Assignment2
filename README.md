@@ -16,6 +16,6 @@ Set up a PostgreSQL database either inside a Docker container or using local pgA
 6. Open Java files: For running application you should use Main.java
 7. Creating connection with database: You should use your own url,username, and password for creating connection. Example: url="jdbc:postgresql://localhost:5432/Database_Systems_Assignment02"; username="postgresql"; password="root1234".
 8. After that you are ready for running Main.java.
-9. After running Main.java, you should enter input, this input should be one of the these table names:"authors","books","customers", "orders","orderdetails".
+9. After running Main.java, you should enter input, this input should be one of the these operations: "CRUD", "Transaction","Metadata". Because of inserting records for tables, CRUD operation are recommended firstly. After writing "CRUD", you should enter another input. These input should be on of these table names:"authors","books","customers", "orders","orderdetails".
 10. Required operations will be generated after your input in specific for each table
 11. That is all for running and setting up application.
